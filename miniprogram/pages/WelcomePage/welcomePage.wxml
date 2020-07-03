@@ -1,0 +1,11 @@
+<!--miniprogram/pages/WelcomePage/welcomePage.wxml-->
+<view class = "container"> 
+  <view class = "first-row">
+    <image class = "img" src = "../../images/my_img.JPG"></image>
+  <view class = "userinfo-nickname-wrapper">
+    <button class = "text-style">Welcome to my diary</button>
+  </view>
+</view>
+
+</view>
+
