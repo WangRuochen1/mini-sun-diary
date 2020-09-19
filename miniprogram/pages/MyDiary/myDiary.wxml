@@ -11,7 +11,9 @@ enable-flex = "{{true}}" bindscrolltolower= "scrollToLower">
       <text class = "toptext">{{item.today}}</text>
     </view>
     <view class = "line"></view>
+    <view class = "down-view">
     <text class = "toptext">{{item.diary}}</text>
+    </view>
     </view>
   </block>
 </scroll-view>

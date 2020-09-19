@@ -46,3 +46,7 @@ page {
    width: 100%;
    background-color: grey;
 }
+
+.down-view{
+  height: 40px;
+}

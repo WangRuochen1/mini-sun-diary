@@ -46,13 +46,14 @@ Page({
     this.setData({
       diary: val.detail.value
     });
+    console.log(this.data.diary)
   },
 
   finishDiary: function () {
     if (app.globalData.openid) {
       this.setData({
         openid: app.globalData.openid
-      })
+      }) 
     }
     console.log(this.data.openid)
         // add to data base
@@ -67,7 +68,8 @@ Page({
         wx.showToast({
           title: 'Save Successfully!',
         })
-        console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
+        console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id);
+        console.log("successfully: diary:",this.data.diary);
       },
       fail: err => {
         wx.showToast({

@@ -10,6 +10,7 @@ Page({
     openid: "",
     content:"",
     articles:[],
+    currentLoad:0,
   },
 
    /**
@@ -21,24 +22,24 @@ Page({
         openid: app.globalData.openid
       })
     }
-    console.log(this.data.openid);
     this.onQuery();
   },
 
 
   onQuery: function() {
     const db = wx.cloud.database()
-    // 查询当前用户所有的 counters
-    db.collection('diaryCollect').where({
-      openid: this.data.openid
+    //查询当前用户日记
+    db.collection('diaryCollect').skip(this.data.currentLoad).limit(6).where({
+      _openid: this.data.openid
     }).get({
       success: res => {
-        console.log('[数据库] [查询记录] 成功: ', res.data[0])
+        console.log('[数据库] [查询记录] 成功: ', res.data)
+        var tempArray = this.data.articles
+        tempArray.push.apply(tempArray,res.data)
         this.setData({
-          articles: res.data,
-          // JSON.stringify(res.data, null, 2)
+          articles: tempArray,
+          currentLoad: this.data.currentLoad + 6,
         })
-        console.log(this.data.articles)
       },
       fail: err => {
         wx.showToast({
@@ -48,6 +49,11 @@ Page({
         console.error('[数据库] [查询记录] 失败：', err)
       }
     })
+  },
+
+  scrollToLower: function() {
+    console.log ("到最底下啦!!!");
+    this.onQuery();
   },
 
  
