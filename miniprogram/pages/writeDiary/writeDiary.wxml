@@ -1,0 +1,18 @@
+<!--miniprogram/pages/writeDiary/writeDiary.wxml-->
+ <view class = "container">
+  <image class = "bgm" src = "../../images/sky_cut.JPG"></image>
+
+  <text class = "title">Hey, write something down</text>
+  <text class = "time">{{today}}</text>
+  <textarea class = "textInput" placeholder="my diary" 
+  maxlength	= "-1"  bindblur = "setDiary" value = "{{diary}}"></textarea>
+  <view class = "finish">
+   <view class = "inner1">
+   <button class = "back-button" style = "width: 100%" bindtap="clickBack"> 
+  Back</button>
+  </view>
+  <view class = "inner2">
+  <button class = "finish-button" style = "width: 100%" bindtap="finishDiary"> Finish </button>
+  </view>
+  </view>
+ </view>

@@ -1,0 +1,17 @@
+<!--miniprogram/pages/MyDiary/myDiary.wxml-->
+<scroll-view class = "container" scroll-y = "{{true}}" 
+enable-flex = "{{true}}" bindscrolltolower= "scrollToLower">
+  <view class = "tophead">
+  <text class = "toptext">Total:{{number}}</text>
+  
+  </view>
+  <block wx:for="{{articles}}" wx:key = "index">
+    <view class = "block-view">
+    <view class = "inner-block">
+      <text class = "toptext">{{item.today}}</text>
+    </view>
+    <view class = "line"></view>
+    <text class = "toptext">{{item.diary}}</text>
+    </view>
+  </block>
+</scroll-view>

@@ -1,0 +1,48 @@
+/* miniprogram/pages/MyDiary/myDiary.wxss */
+page {
+  width: 100%;
+  height: 100%;
+ }
+
+ .container {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   background-color:white;
+   height: 100%;
+ }
+
+ .tophead {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   height: 60px;
+   width: 100%;
+   background-color: rgb(198, 248, 248);
+ }
+
+ .toptext {
+   margin-top: 40px;
+   font-family:Arial;
+   color:grey;
+ }
+
+ .block-view {
+   height: 80px;
+   width: 90%;
+   border-color: grey;
+   border-width: 2px;
+   margin-top: 20px;
+   border-style: solid;
+ }
+
+ .inner-block {
+   height: 20px;
+   width: 100%;
+ }
+
+ .line {
+   height: 2px;
+   width: 100%;
+   background-color: grey;
+}
