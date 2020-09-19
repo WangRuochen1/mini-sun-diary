@@ -1,18 +1,74 @@
 // miniprogram/pages/WelcomePage/welcomePage.js
+
+const app = getApp()
+
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    avatarUrl: '../../images/my_img.JPG',
+    userInfo: {},
+    logged: false,
+    takeSession: false,
+    requestResult: ''
   },
 
+  gotoWrite: function() {
+    wx.redirectTo({
+      url: '/pages/writeDiary/writeDiary',
+    })
+  },
+
+  gotoMyDiary: function() {
+    wx.navigateTo({
+      url: '/pages/MyDiary/myDiary',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if (!wx.cloud) {
+      wx.redirectTo({
+        url: '../chooseLib/chooseLib',
+      })
+      return
+    }
 
+    // 获取用户信息
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+          wx.getUserInfo({
+            success: res => {
+              this.setData({
+                avatarUrl: res.userInfo.avatarUrl,
+                userInfo: res.userInfo
+              })
+              wx.cloud.callFunction({
+                name: 'login',
+                data: {},
+                success: res => {
+                  console.log('get into here![云函数] [login] user openid: ', 
+                  res.result.userInfo.openId)
+                  app.globalData.openid = res.result.userInfo.openId
+                  this.setData({
+                    openid: res.result.userInfo.openId
+                  })
+                },
+                fail: err => {
+                  console.error('[云函数] [login] 调用失败', err)
+                }
+              })
+              console.log(res);
+            }
+          })
+        }
+      }
+    })
+
+   
+  
   },
 
   /**

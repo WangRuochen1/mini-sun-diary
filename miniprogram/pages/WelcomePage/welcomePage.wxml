@@ -1,11 +1,24 @@
-<!--miniprogram/pages/WelcomePage/welcomePage.wxml-->
+<!--Welcome Page-->
+
+
 <view class = "container"> 
+  <!-- <background img> -->
+  <image class = "bgm" src = "../../images/plant_cut.JPG"></image>
+  <!-- <title> -->
   <view class = "first-row">
-    <image class = "img" src = "../../images/my_img.JPG"></image>
-  <view class = "userinfo-nickname-wrapper">
+    <button class = "img" style="background-image: url({{avatarUrl}})" open-type="getUserInfo"></button>
+    <view class = "userinfo-nickname-wrapper">
     <button class = "text-style">Welcome to my diary</button>
+    </view>
+  </view>
+  <!-- button -->
+  <view class = "button-row">
+   <button class = "navigate-button" bindtap = "gotoMyDiary"> My Diary</button>
+   <button class = "navigate-button" bindtap="gotoWrite"> Write Diary</button>
+  </view>
+  <!-- button -->
+  <view class = "button-row">
+    <button class = "navigate-button"> Tell Bug Producer</button>
+    <button class = "navigate-button"> Anime Recommend</button>
   </view>
 </view>
-
-</view>
-
