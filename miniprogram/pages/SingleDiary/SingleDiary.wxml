@@ -1,0 +1,8 @@
+<!--miniprogram/pages/SingleDiary.wxml-->
+<view class = "overview">
+  <text class = "date">{{date}}</text>
+  <view class = "line"></view>
+  <scroll-view class = "content-view">
+    <text class = "content">{{content}}</text>
+  </scroll-view>
+</view>

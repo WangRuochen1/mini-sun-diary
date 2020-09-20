@@ -1,7 +1,7 @@
 /* miniprogram/pages/MyDiary/myDiary.wxss */
 page {
   width: 100%;
-  height: 100%;
+  height: 660px;
  }
 
  .container {
@@ -22,24 +22,30 @@ page {
  }
 
  .toptext {
-   margin-top: 40px;
+   margin-top: 30px;
    font-family:Arial;
    color:grey;
  }
 
+ .toptext1 {
+  font-family:Arial;
+  color:grey;
+}
+
  .block-view {
-   height: 80px;
+   height: 100px;
    width: 90%;
-   border-color: grey;
-   border-width: 2px;
+   border-color:grey;
+   border-width: 1px;
    margin-top: 20px;
    border-style: solid;
+   margin-bottom: 5px;
  }
 
- .inner-block {
+ /* .inner-block {
    height: 20px;
    width: 100%;
- }
+ } */
 
  .line {
    height: 2px;
@@ -47,6 +53,27 @@ page {
    background-color: grey;
 }
 
-.down-view{
-  height: 40px;
+  .down-view {
+  display: flex;
+  height: 50px;
+  flex-direction: row;
+  justify-content: start;
 }
+
+  .diarytext {
+  font-family:Arial;
+  color:grey;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width:90%;
+}
+
+  .Button {
+    background-color: rgb(198, 248, 248);
+    width: 10%;
+  }

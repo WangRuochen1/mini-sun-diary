@@ -11,6 +11,7 @@ Page({
     content:"",
     articles:[],
     currentLoad:0,
+    loadMore: false,
   },
 
    /**
@@ -38,6 +39,7 @@ Page({
         tempArray.push.apply(tempArray,res.data)
         this.setData({
           articles: tempArray,
+          loadMore: false,
           currentLoad: this.data.currentLoad + 6,
         })
       },
@@ -53,9 +55,24 @@ Page({
 
   scrollToLower: function() {
     console.log ("到最底下啦!!!");
-    this.onQuery();
+    console.log(this.data.loadMore);
+    if(!this.data.loadMore) {
+      this.setData({
+        loadMore: true,
+      })
+      this.onQuery();
+    } 
   },
 
+  showDiary: function(content) {
+    console.log(content.currentTarget.dataset.name);
+    console.log(content.currentTarget.dataset.time)
+    var param = JSON.stringify(content.currentTarget.dataset.name);
+    var time = JSON.stringify(content.currentTarget.dataset.time);
+    wx.navigateTo({
+      url: '/pages/SingleDiary/SingleDiary?param=' +param+'&time='+time,
+    })
+  },
  
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -53,12 +53,12 @@ page {
 }
 .back-button {
   color: blanchedalmond;
-  background-color: lightblue;
+  background-color: lightpink;
 }
 
 .finish-button {
   color: blanchedalmond;
-  background-color: lightblue;
+  background-color: lightpink;
 }
 
 .time {

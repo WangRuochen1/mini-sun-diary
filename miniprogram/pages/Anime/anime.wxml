@@ -1,0 +1,27 @@
+<!--miniprogram/pages/Anime/anime.wxml-->
+<view class = "container"> 
+  <view class = "topic">
+    <text class = "topic-text">Haikyuu!!</text>
+  </view>
+  <scroll-view class = "content"> 
+    <text>哇，终于写完小程序了，那么就乘着这个难得的机会来介绍一下最喜欢的动漫之一《排球少年！！》</text>
+    <image src = "https://i0.hdslb.com/bfs/article/c1814f3830098bd95791dada9c58bf217755e9b0.jpg"></image>
+    <text>作为一部由Jump人气漫画改编的动画，小排球在原作上是绝对有保证的，再加上Production IG这样的公司制作，无论是画面还是剧情都是十分令人赏心悦目的。对于热血运动番而言，小排球无疑是十分优秀的，但是还不敢说是我心中的No.1，如果一定要说的话，那肯定是《强风吹拂》（笑）</text>
+    <image src = "http://i0.hdslb.com/bfs/article/c51a2ebd8d4a473b8cb7818d9dcd168cf0e92e02.jpg"></image>
+    <text>单从原作漫画（这里也墙裂推荐）来看，排球少年在Jump的顺位在连载的8年半中一直排在上游水平，刚刚过去一年里更是排在前三位。现如今为了满足市场需求，很多运动番都是买肉卖腐向的，但是我们来看看小排球讲的什么，妈耶，“坚持”，“羁绊”，“成长”，“胜利”，“沙雕”（bushi，简直就是Jump精神的良心传承者呀！</text>
+    <image src = "http://i0.hdslb.com/bfs/article/287e88758cf05877443691c02dd2356032c120a8.jpg"></image>
+    <text>故事的梗概大概就是，我们的小可爱男主角日向翔阳因为憧憬身高只有170但是在赛场上却表现出色的“小巨人”开始打排球，然而时运不济，初中的排球社团里只有他一个人，好不容易等了三年，有三个学弟加入，再凑齐一个篮球社和一个足球社的朋友去参加大赛，结果第一场比赛就非常倒霉的碰到了“球场上的王者”（一个长得帅的呆子）影山飞雄所在的的强队，然后完美的输的一塌糊涂。本来打算上了高中以后努力练习跟这位“王者”打一场复仇赛。然而，缘，妙不可言，两个人居然在同一个高中。在这之后两人磕磕绊绊，跟着伙伴们一起赢比赛，输比赛，赢比赛。。。并最终（咳咳，不剧透了。反正就是并没有主角光环，该赢就赢，该输就输。</text>
+    <image src = "http://i0.hdslb.com/bfs/article/c3a6aa0001cf93ce11bc43b9c2a6f47d3a89ef6e.png"></image>
+    <text>不光是主角队的成长故事，小排球出场的学校不下15个，描写的人物175+个，这部番完完全全可以作为一部青春（沙雕）群像来看。个人最佩服的当属原作者古馆春一的人物描写能力，就算是配角也能有贯穿全作的一条完整的成长线，而主角的成长更是描写的非常顺畅，环环相扣，不拖泥带水。并且所有的情节都是有伏笔的（最长的一个伏笔放了200多话，总共402话），让人看了以后恍然大悟，啊，原来是这样！</text>
+    <image src = "http://i0.hdslb.com/bfs/article/9f574d54b542620c59bb0e547ba2477fff258a37.jpg"></image>
+    <text>同时动画的叙事能力更是diao的一比，各种分镜，配乐都是恰到好处，甚至可以说，每一帧都可以截图下来做desktop，而且会让人产生：啊，这个画面我想画的欲望。由于语文不太好，安利程度很有限，于是这里找到了一个b站视频，这位up主的安利是真的不错的</text>
+    <text>https://www.bilibili.com/video/
+      BV1Ai4y1G7Ru
+      如果想看强风吹拂的小朋友这里也有安利的视频：
+      https://www.bilibili.com/video/
+      BV1g4411u7rc</text>
+      <image src = "http://i0.hdslb.com/bfs/article/ed07f8ba7ac17b253b8d840c2ee6e1d56f45f030.jpg"></image>
+      <text>隔离效率是真的高，在家都没这么高产哈哈哈</text>
+    
+  </scroll-view>
+</view>

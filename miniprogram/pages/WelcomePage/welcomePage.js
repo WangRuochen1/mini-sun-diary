@@ -5,7 +5,7 @@ const app = getApp()
 Page({
 
   data: {
-    avatarUrl: '../../images/my_img.JPG',
+    avatarUrl: '',
     userInfo: {},
     logged: false,
     takeSession: false,
@@ -14,7 +14,7 @@ Page({
   },
 
   gotoWrite: function() {
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/writeDiary/writeDiary',
     })
   },
@@ -22,6 +22,18 @@ Page({
   gotoMyDiary: function() {
     wx.navigateTo({
       url: '/pages/MyDiary/myDiary',
+    })
+  },
+
+  gotoAnime: function() {
+    wx.navigateTo({
+      url: '/pages/Anime/anime',
+    })
+  },
+
+  gotoTellBug: function (){
+    wx.navigateTo({
+      url: '/pages/TellBug/tellBug',
     })
   },
   /**

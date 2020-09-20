@@ -3,7 +3,7 @@
 
 <view class = "container"> 
   <!-- <background img> -->
-  <image class = "bgm" src = "../../images/plant_cut.JPG"></image>
+  <image class = "bgm" src = "http://i0.hdslb.com/bfs/article/6d1e4dc6b1847093a55896aecae6018400b29a59.jpg"></image>
   <!-- <title> -->
   <view class = "first-row">
     <button class = "img" style="background-image: url({{avatarUrl}})" open-type="getUserInfo"></button>
@@ -18,7 +18,7 @@
   </view>
   <!-- button -->
   <view class = "button-row">
-    <button class = "navigate-button"> Tell Bug Producer</button>
-    <button class = "navigate-button"> Anime Recommend</button>
+    <button class = "navigate-button" bindtap="gotoTellBug"> Tell Bug Producer</button>
+    <button class = "navigate-button" bindtap = "gotoAnime"> Anime Recommend</button>
   </view>
 </view>

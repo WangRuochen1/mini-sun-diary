@@ -1,10 +1,11 @@
-<!--miniprogram/pages/writeDiary/writeDiary.wxml-->
- <view class = "container">
-  <image class = "bgm" src = "http://i0.hdslb.com/bfs/article/77fe1d6f03aa3f401ad76746dc8729c4ff8113b2.jpg"></image>
+<!--miniprogram/pages/TellBug/tellBug.wxml-->
+
+<view class = "container">
+  <image class = "bgm" src = "http://i0.hdslb.com/bfs/article/6d1e4dc6b1847093a55896aecae6018400b29a59.jpg"></image>
 
   <text class = "title">Hey, write something down</text>
   <text class = "time">{{today}}</text>
-  <textarea class = "textInput" placeholder="my diary" 
+  <textarea class = "textInput" placeholder="Tell Ruochen Something" 
   maxlength	= "-1"  bindblur = "setDiary" value = "{{diary}}"></textarea>
   <view class = "finish">
    <view class = "inner1">
@@ -16,3 +17,4 @@
   </view>
   </view>
  </view>
+
